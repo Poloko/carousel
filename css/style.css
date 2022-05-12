@@ -1,0 +1,138 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.single-slide.active p{
+    font-size: 22px;
+    font-weight: bold;
+    transition: font-size 3s ease;
+    -webkit-transition: font-size 3s ease;
+}
+
+.single-slide a{
+    display: none;
+    opacity: 0;
+    color: white;
+    background-color: gold;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: opacity 4s linear, background-color 2s ease, color 2s ease;
+    -webkit-transition: opacity 4s linear, background-color 2s ease, color 2s ease;
+}
+
+.single-slide.active a:hover {
+    background-color: greenyellow;
+    color: #000000;
+}
+
+#slides{
+    width: 1140px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    transition: left 2s ease;
+    -webkit-transition: left 2s ease;
+}
+
+.theContainer{
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.single-slide{
+    width: 180px;
+    transition: width 2s ease, border 2s ease, color 3s ease-out;
+    -webkit-transition: width 2s ease, border 2s ease, color 3s ease-out;
+}
+
+.single-slide.active{
+    width: 280px;
+    background-color: #ccc;
+    color: #ffffff;
+    border-bottom: 10px solid yellow;
+}
+
+.single-slide.active a{
+    display: inline-block;
+    opacity: 1;
+}
+
+.fa-arrow-circle-left{
+    left: calc((100% / 12) * 2);
+    top: 260px;
+    cursor: pointer;
+}
+
+.fa-arrow-circle-right{
+    right: calc((100% / 12) * 2);
+    top: 260px;
+    cursor: pointer;
+}
+
+.single-slide:not(:first-child), .single-slide:first-child {
+    margin-left: 20px
+}
+.single-slide:last-child{
+    margin-right: 20px
+}
+
+@media screen and (min-width: 768px){
+    #slides{
+        width: 1460px;
+    }
+    .single-slide{
+        width: 220px;
+    }
+    .theContainer{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .single-slide.active{
+        width: 440px;
+    }
+
+    .single-slide.active p{
+        font-size: 34px;
+    }
+
+    .fa-arrow-circle-left{
+        left: calc((100% / 12) * 2);
+        top: 410px;
+    }
+
+    .fa-arrow-circle-right{
+        right: calc((100% / 12) * 2);
+        top: 410px;
+    }
+
+}
+@media screen and (min-width: 1024px){
+
+    #slides{
+        width: 1580px;
+    }
+    .single-slide{
+        width: 230px;
+    }
+    .theContainer{
+        width: 100%;
+        margin: 0;
+    }
+
+    .single-slide.active{
+        width: 520px;
+    }
+
+    .single-slide.active p{
+        font-size: 40px;
+    }
+
+}

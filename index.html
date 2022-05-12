@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="dist/output.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="font_awesome/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<script src="js/angular.min.js"></script>
+<script src="js/gsap.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl" class="w-full max-w-[1560px] mx-auto mt-[150px] ">
+    <div class="w-full overflow-x-hidden relative theContainer">
+        <div id="slides" class="slides">
+                <div id="slideOne" data-name="slideOne" class="single-slide inline-block my-auto shadow-md shadow-black text-center align-middle rounded-2xl " data-order="0">
+                    <img src="{{ card1Image}}"  alt=""/>
+                    <p class="pb-2.5">{{ card1Name}}</p>
+                    <a href="{{ card1Url}}">{{ btnText }}</a>
+                </div>
+                <div  id="slideTwo" data-name="slideTwo" class="single-slide inline-block my-auto shadow-md shadow-black text-center align-middle rounded-2xl " data-order="1">
+                    <img src="{{ card2Image}}"  alt=""/>
+                    <p class="pb-2.5">{{ card2Name}}</p>
+                    <a href="{{ card2Url}}">{{ btnText }}</a>
+                </div>
+                <div id="slideThree" data-name="slideThree" class="single-slide active inline-block my-auto shadow-md shadow-black text-center align-middle rounded-2xl " data-order="2">
+                    <img src="{{ card3Image}}"  alt=""/>
+                    <p class="pb-2.5">{{ card3Name}}</p>
+                    <a href="{{ card3Url}}">{{ btnText }}</a>
+                </div>
+                <div id="slideFour" data-name="slideFour" class="single-slide inline-block my-auto shadow-md shadow-black text-center align-middle rounded-2xl " data-order="3">
+                    <img src="{{ card4Image}}"  alt=""/>
+                    <p class="pb-2.5">{{ card4Name}}</p>
+                    <a href="{{ card4Url}}">{{ btnText }}</a>
+                </div>
+                <div id="slideFive" data-name="slideFive" class="single-slide inline-block my-auto shadow-md shadow-black text-center align-middle rounded-2xl "  data-order="4">
+                    <img src="{{ card5Image}}"  alt=""/>
+                    <p class="pb-2.5">{{ card5Name}}</p>
+                    <a href="{{ card5Url}}">{{ btnText }}</a>
+                </div>
+        </div>
+        <div class="w-full relative">
+            <i class="fa fa-arrow-circle-left absolute inline-block mx-auto" ng-click="navItems('left')" aria-hidden="true"></i>
+            <i class="fa fa-arrow-circle-right absolute inline-block mx-auto" ng-click="navItems('right')" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
